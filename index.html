@@ -3,49 +3,73 @@
 <head>
   <title>Zahra ❤️</title>
   <style>
-    body{
-      margin:0;
-      font-family:Arial;
-      text-align:center;
-      background:linear-gradient(45deg,#ffd1dc,#ffe6f0,#e6ccff);
-      height:100vh;
-      overflow:hidden;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(45deg, #ffd1dc, #ffe6f0, #e6ccff);
+      height: 100vh;
+      overflow: hidden;
     }
-    .card{
-      background:white;
-      padding:40px;
-      border-radius:20px;
-      width:350px;
-      margin:auto;
-      margin-top:8%;
-      box-shadow:0 20px 50px rgba(0,0,0,0.2);
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      width: 350px;
+      margin: auto;
+      margin-top: 8%;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
     }
-    h1{color:#ff4d6d;}
-    button{
-      padding:15px 25px;
-      font-size:18px;
-      border:none;
-      border-radius:30px;
-      cursor:pointer;
-      margin:10px;
+
+    h1 {
+      color: #ff4d6d;
     }
-    #yes{background:#ff4d6d;color:white;}
-    #no{background:gray;color:white;position:absolute;}
+
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #no {
+      background: gray;
+      color: white;
+      position: absolute;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 
 <body>
 
+<!-- Autoplaying background music -->
 <audio autoplay loop>
   <source src="raina.mp3" type="audio/mpeg">
 </audio>
 
+<!-- Valentine image -->
+<img src="valentine.jpg" alt="Valentine">
+
 <div class="card">
   <h1>Zahra ❤️</h1>
   <p>
-  We've been through so many rough patches…<br><br>
-  But through everything, I still choose you every single day.<br><br>
-  Will you be my Valentine? 💌
+    We've been through so many rough patches…<br><br>
+    But through everything, I still choose you every single day.<br><br>
+    Will you be my Valentine? 💌
   </p>
 
   <button id="yes" onclick="yesClick()">YES 💖</button>
@@ -53,15 +77,16 @@
 </div>
 
 <script>
-function yesClick(){
-  document.body.innerHTML="<h1 style='margin-top:20%;color:#ff4d6d'>YAYYY!!! I LOVE YOU ❤️</h1>";
+function yesClick() {
+  document.body.innerHTML = "<h1 style='margin-top:20%;color:#ff4d6d'>YAYYY!!! I LOVE YOU ❤️</h1>";
 }
 
-function moveNo(){
-  var x=Math.random()*window.innerWidth;
-  var y=Math.random()*window.innerHeight;
-  document.getElementById('no').style.left=x+'px';
-  document.getElementById('no').style.top=y+'px';
+function moveNo() {
+  var x = Math.random() * (window.innerWidth - 100);
+  var y = Math.random() * (window.innerHeight - 50);
+  var noBtn = document.getElementById('no');
+  noBtn.style.left = x + 'px';
+  noBtn.style.top = y + 'px';
 }
 </script>
 
